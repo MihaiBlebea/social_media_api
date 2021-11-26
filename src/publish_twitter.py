@@ -13,8 +13,8 @@ class Publisher():
 		self.config = dotenv_values(".env")
 
 		# create the api client
-		auth = tweepy.OAuthHandler(self.config["CONSUMER_KEY"], self.config["CONSUMER_SECRET"])
-		auth.set_access_token(self.config["ACCESS_TOKEN"], self.config["ACCESS_TOKEN_SECRET"])
+		auth = tweepy.OAuthHandler(self.config["TWITTER_CONSUMER_KEY"], self.config["TWITTER_CONSUMER_SECRET"])
+		auth.set_access_token(self.config["TWITTER_ACCESS_TOKEN"], self.config["TWITTER_ACCESS_TOKEN_SECRET"])
 
 		self.api = tweepy.API(auth)
 
